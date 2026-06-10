@@ -6,14 +6,23 @@ font-family:Arial,sans-serif;
 }
 
 body{
-background:#f5f5f5;
+background:
+linear-gradient(
+rgba(255,255,255,0.88),
+rgba(255,255,255,0.88)
+),
+url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=2000");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:#222;
 }
 
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-url("https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=2000");
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=2000");
 background-size:cover;
 background-position:center;
 display:flex;
@@ -33,6 +42,11 @@ font-size:70px;
 margin-bottom:20px;
 }
 
+.overlay p{
+font-size:24px;
+line-height:1.8;
+}
+
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -41,7 +55,7 @@ padding:60px;
 }
 
 .card{
-background:white;
+background:rgba(255,255,255,.96);
 border-radius:15px;
 overflow:hidden;
 text-decoration:none;
@@ -60,15 +74,24 @@ height:220px;
 object-fit:cover;
 }
 
-.card h3,
-.card p{
+.card h3{
 padding:15px;
+color:#2e7d32;
+}
+
+.card p{
+padding:0 15px 20px;
 }
 
 .page{
 max-width:1000px;
 margin:auto;
-padding:30px;
+padding:35px;
+background:rgba(255,255,255,.95);
+border-radius:15px;
+margin-top:30px;
+margin-bottom:30px;
+box-shadow:0 5px 20px rgba(0,0,0,.12);
 }
 
 .banner{
@@ -81,6 +104,8 @@ margin-bottom:30px;
 
 .content-img{
 width:100%;
+height:320px;
+object-fit:cover;
 border-radius:15px;
 margin:20px 0;
 }
@@ -88,15 +113,18 @@ margin:20px 0;
 .page h1{
 color:#2e7d32;
 margin-bottom:20px;
+font-size:42px;
 }
 
 .page h2{
-margin-top:30px;
+margin-top:35px;
 margin-bottom:15px;
+color:#1b5e20;
 }
 
 .page p{
-line-height:1.8;
+line-height:1.9;
+font-size:18px;
 }
 
 .btn{
@@ -107,4 +135,37 @@ background:#2e7d32;
 color:white;
 text-decoration:none;
 border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+background:#1b5e20;
+}
+
+@media(max-width:768px){
+
+.overlay h1{
+font-size:45px;
+}
+
+.overlay p{
+font-size:18px;
+}
+
+.cards{
+padding:25px;
+}
+
+.banner{
+height:250px;
+}
+
+.content-img{
+height:220px;
+}
+
+.page{
+padding:20px;
+}
 }
